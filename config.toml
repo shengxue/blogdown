@@ -5,7 +5,7 @@ theme = "hpstr-hugo-theme"
 pluralizelisttitles = false
 PygmentsCodeFences = true
 Paginate = 5
-disqusShortname = "hpstrhugo"
+disqusShortname = "algorithmist"
 googleAnalytics = "UA-111479944-1"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
