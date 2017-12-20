@@ -1,0 +1,25 @@
+---
+title: Octave in Sublime Text3
+date: 2016-11-06
+tags: [Octave, Sublime Text]
+---
+
+
+
+<div id="install-octave" class="section level1">
+<h1>Install Octave</h1>
+<p>Download Octave from <a href="https://ftp.gnu.org/gnu/octave/windows/" class="uri">https://ftp.gnu.org/gnu/octave/windows/</a>, and register its folder to environment variable <em>Path</em>.</p>
+</div>
+<div id="create-build-system-for-octave-file-in-sublime-text3" class="section level1">
+<h1>Create build system for Octave file in Sublime Text3</h1>
+<p>Octave.sublime_build</p>
+<pre class="json"><code>{
+    &quot;cmd&quot;: [&quot;octave-gui&quot;, &quot;$file&quot;],
+    &quot;shell&quot;: true   // to show plots
+}</code></pre>
+</div>
+<div id="create-short-cut-for-canceling-build" class="section level1">
+<h1>Create short-cut for canceling build</h1>
+<p>Add the line to Preferencesbindings</p>
+<pre class="json"><code>{ &quot;keys&quot;: [&quot;ctrl+shift+b&quot;], &quot;command&quot;: &quot;exec&quot;, &quot;args&quot;: {&quot;kill&quot;: true} },</code></pre>
+</div>

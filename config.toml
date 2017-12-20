@@ -1,0 +1,27 @@
+baseurl = "http://shengxue.github.io/"
+languageCode = "en-gb"
+title = "Runner"
+theme = "hpstr-hugo-theme"
+pluralizelisttitles = false
+PygmentsCodeFences = true
+Paginate = 5
+disqusShortname = "hpstrhugo"
+googleAnalytics = "UA-111479944-1"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[params]
+	subtitle = "Time and pressure ..."
+	[params.author]
+		name = "Sheng Xue"
+		avatar = "/images/shengxue.jpg"
+		bio = "Working as C++/C# developer, while actively learning node.js/AngularJs/Data Science/Machine Learning"
+		github = "shengxue/shengxue.github.io"
+
+	[params.image]
+	  feature = "/images/geiranger-1508630_1920.jpg"
+	  credit = "dargadgetz"
+	  creditlink = "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"
