@@ -1,0 +1,9 @@
+---
+title: The Element of Statistic Learning - Chapter 5
+date: 2019-10-07
+tags: [ESL]
+---
+
+# Notes
+- Eigen-decomposition
+$$S = \sum_{k=1}^N \rho_ku_ku_k^T$$
