@@ -1,0 +1,88 @@
+---
+title: Matrix cookbook - Trace
+date: 2019-10-11
+tags: [Matrix, cookbook, trace]
+---
+
+
+
+<p><span class="math display">\[\begin{equation}
+\tag{11}
+\operatorname{Tr}(\mathbf{A})=\sum_{i} A_{i i}
+\end{equation}\]</span></p>
+<blockquote>
+<p><span style="color:blue"> Let’s write the trace in a more convenient way. We have: <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
+<span class="math display">\[\begin{equation}
+A e_{i}=\left[\begin{array}{ccc}{a_{11}} &amp; {\cdots} &amp; {a_{1 n}} \\ {\vdots} &amp; {\ddots} &amp; {\vdots} \\ {a_{n 1}} &amp; {\cdots} &amp; {a_{n n}}\end{array}\right]\left[\begin{array}{c}{0} \\ {\vdots} \\ {1} \\ {\vdots} \\ {0}\end{array}\right]=\left[\begin{array}{c}{a_{i 1}} \\ {\vdots} \\ {a_{i n}}\end{array}\right]
+\end{equation}\]</span>
+where the <span class="math inline">\(1\)</span> is in the <span class="math inline">\(i\)</span>-th entry. This way:
+<span class="math display">\[\begin{equation}
+\left\langle e_{i}, A e_{i}\right\rangle= e_{i}^{t} A e_{i}=A_{i i}
+\end{equation}\]</span>
+So <span class="math inline">\(\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}\)</span></span>.</p>
+</blockquote>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{12}
+\operatorname{Tr}(\mathbf{A})=\sum_{i} \lambda_{i}, \quad \lambda_{i}=\operatorname{eig}(\mathbf{A})
+\end{equation}\]</span></p>
+<blockquote>
+<p>If eigendecomposition of matrix <span class="math inline">\(\mathbf{A}\)</span> is <span class="math inline">\(\mathbf{A}=\mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}\)</span>, then according to equation (16):
+<span class="math display">\[\begin{align}
+\operatorname{Tr}(\mathbf{A})&amp;=\operatorname{Tr}(\mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}) \\
+&amp;=\operatorname{Tr}(\mathbf{\Lambda} \mathbf{Q}^{-1} \mathbf{Q}) \\
+&amp;=\operatorname{Tr}(\mathbf{\Lambda}) \\
+&amp;=\sum_{i} \lambda_{i}
+\end{align}\]</span></p>
+</blockquote>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{13}
+\operatorname{Tr}(\mathbf{A})=\operatorname{Tr}\left(\mathbf{A}^{T}\right)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{14}
+\operatorname{Tr}(\mathbf{A B})=\operatorname{Tr}(\mathbf{B A})
+\end{equation}\]</span></p>
+<blockquote>
+<p>Now: <span class="math inline">\((\mathbf{A B})_{ij}=\sum_{k}A_{ik}B_{kj}\)</span>, and: <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
+<span class="math display">\[\begin{equation}
+\operatorname{tr}(A B)=\sum_{i} \sum_{k} A_{i k} B_{k i}
+\end{equation}\]</span></p>
+<p>On the other hand, <span class="math inline">\((\mathbf{B A})_{ij}=\sum_{k}B_{ik}A_{kj}\)</span>. So:
+<span class="math display">\[\begin{equation}
+\operatorname{tr}(B A)=\sum_{i} \sum_{k} B_{i k} A_{k i}
+\end{equation}\]</span>
+They are the same quantity, up to renaming indices <span class="math inline">\((i \leftrightarrow k)\)</span></p>
+</blockquote>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{15}
+\operatorname{Tr}(\mathbf{A}+\mathbf{B})=\operatorname{Tr}(\mathbf{A})+\operatorname{Tr}(\mathbf{B})
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\tag{16}
+\operatorname{Tr}(\mathbf{A B C})=\operatorname{Tr}(\mathbf{B C A})=\operatorname{Tr}(\mathbf{C A B})
+\end{equation}\]</span></p>
+<hr />
+<p><span class="math display">\[\begin{equation}
+\tag{17}
+\mathbf{a}^{T} \mathbf{a}=\operatorname{Tr}\left(\mathbf{a a}^{T}\right)
+\end{equation}\]</span></p>
+<blockquote>
+<p><span class="math display">\[\begin{align}
+\mathbf{a a}^{T}&amp;=\left[\begin{array}{c}{a_{1}} \\ {\vdots} \\ {a_{n}}\end{array}\right]\left[{a_{1}}, {\cdots}, {a_{n}}\right] \\
+&amp;=\left[\begin{array}{ccc}{a_{1}}^{2} &amp; {\cdots} &amp; {a_{1}a_{n}} \\ {\vdots} &amp; {\ddots} &amp; {\vdots} \\ {a_{n}a_{1}} &amp; {\cdots} &amp; {a_{n}}^{2}\end{array}\right]
+\end{align}\]</span></p>
+<p>So,
+<span class="math display">\[\begin{equation}
+\operatorname{Tr}\left(\mathbf{a a}^{T}\right) = a_{1}^{2}+\cdots+a_{n}^{2} = \mathbf{a}^{T} \mathbf{a}
+\end{equation}\]</span></p>
+</blockquote>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150" class="uri">https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150" class="uri">https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
