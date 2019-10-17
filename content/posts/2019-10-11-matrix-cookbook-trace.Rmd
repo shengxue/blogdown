@@ -19,6 +19,8 @@ where the $1$ is in the $i$-th entry. This way:
 \end{equation}
 So $\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}$</span>.
 
+Intuitive explanation [^2]
+
 ***
 
 \begin{equation}
@@ -46,7 +48,7 @@ So $\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}$</span>.
 \operatorname{Tr}(\mathbf{A B})=\operatorname{Tr}(\mathbf{B A})
 \end{equation}
 
-> Now: $(\mathbf{A B})_{ij}=\sum_{k}A_{ik}B_{kj}$, and: [^1]
+> Now: $(\mathbf{A B})_{ij}=\sum_{k}A_{ik}B_{kj}$, and: [^3]
 \begin{equation}
 \operatorname{tr}(A B)=\sum_{i} \sum_{k} A_{i k} B_{k i}
 \end{equation}
@@ -56,8 +58,6 @@ So $\operatorname{Tr}(\mathbf{A})=\sum_{i}A_{ii}$</span>.
 \operatorname{tr}(B A)=\sum_{i} \sum_{k} B_{i k} A_{k i}
 \end{equation}
 They are the same quantity, up to renaming indices $(i \leftrightarrow k)$
-
-[^1]: https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150
 
 ***
 
@@ -87,3 +87,7 @@ They are the same quantity, up to renaming indices $(i \leftrightarrow k)$
 \begin{equation}
 \operatorname{Tr}\left(\mathbf{a a}^{T}\right) = a_{1}^{2}+\cdots+a_{n}^{2} = \mathbf{a}^{T} \mathbf{a}
 \end{equation}
+
+[^1]: https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150
+[^2]: [jupyter notebook](https://github.com/shengxue/Matrix-Cookbook-Notes/blob/master/1.1%20Trace/1.1%20Trace.ipynb)
+[^3]: https://math.stackexchange.com/questions/1314142/trace-of-ab-trace-of-ba/1314150
