@@ -51,4 +51,10 @@
 {{ with $.Param "background" }}
 <style type="text/css">body {background-image:url({{ . }});}</style>
 {{ end }}
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
