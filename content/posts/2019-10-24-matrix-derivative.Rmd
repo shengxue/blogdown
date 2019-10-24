@@ -1,0 +1,25 @@
+---
+title: Matrix cookbook - Derivative
+date: 2019-10-24
+tags: [Matrix, derivative]
+---
+
+\begin{equation}
+\tag{40}
+\partial\left(\mathbf{X}^{-1}\right)=-\mathbf{X}^{-1}(\partial \mathbf{X}) \mathbf{X}^{-1}
+\end{equation}
+
+Explanation: [^1]
+\begin{equation}
+\underbrace{(I)^{\prime}}_{=0}=\left(\mathbf{X} \mathbf{X}^{-1}\right)^{\prime}=\mathbf{X}^{\prime} \mathbf{X}^{-1}+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime} \Rightarrow
+\end{equation}
+
+\begin{equation}
+\mathbf{X}\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{\prime} \mathbf{X}^{-1} \quad \Rightarrow
+\end{equation}
+
+\begin{equation}
+\left(\mathbf{X}^{-1}\right)^{\prime}=-\mathbf{X}^{-1} \mathbf{X}^{\prime} \mathbf{X}^{-1}
+\end{equation}
+
+[^1]: https://math.stackexchange.com/questions/1471825/derivative-of-the-inverse-of-a-matrix
