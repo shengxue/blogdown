@@ -284,9 +284,9 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			max-width: 800px;
+			max-width: 1000px;
 			margin: 50px auto 30px auto;
-			padding: 50px 80px;
+			padding: 50px 200px;
 
 			> p:first-child {
 				@include font-size(20);
