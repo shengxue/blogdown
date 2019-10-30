@@ -1,7 +1,7 @@
 ---
 title: Matrix cookbook - Trace
 date: 2019-10-11
-tags: [Matrix, cookbook, trace]
+tags: [matrix, cookbook, trace]
 ---
 
 \begin{equation}
