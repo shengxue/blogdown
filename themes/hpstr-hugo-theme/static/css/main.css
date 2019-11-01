@@ -3818,7 +3818,7 @@ body {
   position: relative; }
 
 .entry-title {
-  color: #000000;
+  color: rgba(85, 85, 85, 0.8);
   padding: 15px 130px 10.8px;
 }
 
