@@ -1,5 +1,7 @@
 ---
-title: Matrix cookbook - Derivative of log of determinant
+title: Derivative of log of determinant
+description: |
+    Matrix cookbook
 date: 2019-10-30
 tags: [matrix, derivative, determinant]
 ---
@@ -9,14 +11,65 @@ tags: [matrix, derivative, determinant]
 \partial(\ln (\operatorname{det}(\mathbf{X})))=\operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
 \end{equation}
 
-## Lemma 1
+**Lemma 1**
 
 \begin{equation}
 \sum_{i} \sum_{j} \mathbf{A}^{\mathrm{T}}_{i j} \mathbf{B}_{i j} = \operatorname{Tr}\left(\mathbf{A} \mathbf{B}\right)
 \end{equation}
 
-## Lemma 2
+**Lemma 2** [^1] 
+
+(Credit to https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/)
 
 \begin{equation}
 \frac{\partial(\operatorname{det} \mathbf{X})}{\partial \mathbf{X}_{i j}}=\mathbf{C}_{i j}
 \end{equation}
+
+For a matrix $X$, we define some terms:
+
+- The $(i,j)$ minor of $X$, denoted $M_{ij}$, is the determinant of the $(n-1) \times (n-1)$ matrix that remains after removing the $i$th row and $j$th column from $X$.
+  
+- The cofactor matrix of $X$, denoted $C$, is an $n \times n$ matrix such that $C_{ij} = (-1)^{i+j} M_{ij}$.
+
+- The adjugate matrix of $X$, denoted $\operatorname{adj } X$, is simply the transpose of $C$.
+
+These terms are useful because they related to both matrix determinants and inverses. If $X$ is invertible, then $X^{-1}=\frac{1}{\operatorname{det} X}(\operatorname{adj} X)$, so
+
+\begin{equation}
+\left(\textbf{X}^{-1}\right)^T_{ij} = \frac{1}{\operatorname{det} X} C_{ij}
+\end{equation}
+
+On the other hand, by the cofactor expansion of the determinant, $\det  X=\,\,\underset{k=1}{\overset{n}{\varSigma}}X_{ik}C_{ik}$, so by the product rule,
+
+$$
+\frac{\partial \left( \det  X \right)}{\partial X_{ij}}=\,\,\underset{k=1}{\overset{n}{\varSigma}}\frac{\partial X_{ik}}{\partial X_{ij}}C_{ik}\,\,+\,\,\underset{k=1}{\overset{n}{\varSigma}}X_{ik}\frac{\partial C_{ik}}{\partial X_{ij}}
+$$
+
+If $k \neq j$, then $\dfrac{\partial X_{ik}}{\partial X_{ij}} = 0$, otherwise it is equal to 1. This means that the first term above reduces to $C_{ij}$. For any $k$, the elements of $X$ which affect $C_{ik}$ are those which do not lie on row $i$ or column $k$. Hence, $\dfrac{\partial C_{ik}}{\partial X_{ij}} = 0$ for all k! So,
+
+$$\frac{\partial \left( \det  X \right)}{\partial X_{ij}}=C_{ij}$$
+
+**Proof**
+
+Putting all this together with an application of the chain rule, we get
+
+$$\left(\ln (\det X)\right)_{ij}' = \dfrac{1}{\det X} \dfrac{\partial (\det X)}{\partial X_{ij}} = \dfrac{1}{\det X} C_{ij} = (X^{-1})^T_{ij}$$
+
+So, 
+
+\begin{align}
+\partial(\ln (\operatorname{det}(\mathbf{X})))&=\sum_{i} \sum_{j} \left(\ln (\det X)\right)_{ij}' d_{ij} \\
+&= \sum_{i} \sum_{j}(\mathbf{X}^{-1})^T_{ij} d_{ij} \\
+&= \operatorname{Tr}\left(\mathbf{X}^{-1} \partial \mathbf{X}\right)
+\end{align}
+
+where
+$$
+\partial X=\left( \begin{matrix}{}
+	dX_{11}&		\cdots&		dX_{1n}\\
+	\vdots&		\ddots&		\vdots\\
+	dX_{n1}&		\cdots&		dX_{nn}\\
+\end{matrix} \right) 
+$$
+
+[^1]: https://statisticaloddsandends.wordpress.com/2018/05/24/derivative-of-log-det-x/
