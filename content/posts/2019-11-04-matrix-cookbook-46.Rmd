@@ -43,7 +43,7 @@ The first term is just the determinant of the identity matrix which is 1. The te
 
 $$det(I+ϵA)=1+ϵ\sum_{j=1}^N A_{jj}+O(ϵ^2)=1+ϵTr(A)+O(ϵ^2)$$
 
-Particulary when $n=2$,
+Particularly when $n=2$,
 \begin{align}
 \det \left( I+\epsilon A \right) &=\det \left( \begin{matrix}{}
 	1+\varepsilon a_{11}&		\varepsilon a_{12}\\
@@ -58,15 +58,32 @@ Particulary when $n=2$,
 <p class=boxed>
 $$ det^{\prime}(I)=\mathrm {Tr} $$
 </p>
-where $det^{\prime}(I)=Tr$ is the differential of ${\displaystyle \det }$.
+where $det^{\prime}(I)=Tr$ is the differential of ${\displaystyle \det }$
 
-**Proof**
+This equation means that the differential of ${\displaystyle \det }$, evaluated at the identity matrix, is equal to the trace. The differential ${\displaystyle \det '(I)}$ is a linear operator that maps an n × n matrix to a real number.
+
+Using the definition of a directional derivative together with one of its basic properties for differentiable functions, we have
+\begin{equation}
+ \operatorname{det}^{\prime}(I)(T)=\nabla_{T} \operatorname{det}(I)=\lim _{\varepsilon \rightarrow 0} \frac{\operatorname{det}(I+\varepsilon T)-\operatorname{det} I}{\varepsilon} \\
+ = lim_{\varepsilon \rightarrow 0} \frac{1+ϵTr(T)+O(ϵ^2)-1}{\varepsilon} \\
+ = Tr(T)
+\end{equation}
+
+*Alternative proof of lemma 2*: [^4]
 
 $det$  is a function $M_{n×n}→R$ where $M_{n×n}$ is the space of $n×n$ square matrices. Therefore, a matrix is the equivalent of a point for real functions. The best linear approximation to $det$ near the identity is given by:
 $$det(\mathbf{I}+\mathbf{M})=det(\mathbf{I})+d(det(\mathbf{I}))M+R(\mathbf{I},\mathbf{M})$$
-$$\underset{|\epsilon |\rightarrow 0}{lim}\frac{R\left( x_0, \varepsilon \right)}{|\epsilon |}=0$$
+$$\underset{||\mathbf{M} ||\rightarrow 0}{lim}\frac{R(\mathbf{I},\mathbf{M})}{||\mathbf{M} ||}=0$$
 
+$det^{\prime}(I)=\mathrm {Tr}$ is equivalent to the following:
+
+<p class=boxed>
+\begin{equation}
+ \left.\frac{\mathrm{d}}{\mathrm{d} t}[\operatorname{det}(\mathbf{I}+t \mathbf{B})]\right|_{t=0}=\operatorname{Tr}(\mathbf{B}) 
+\end{equation}
+</p>
 
 [^1]: [Jacobi's formula](https://en.wikipedia.org/wiki/Jacobi%27s_formula)
 [^2]: [Best affine approximation](https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po)
 [^3]: [Determinant for a matrix near the identity](https://math.stackexchange.com/questions/1174639/series-expansion-of-the-determinant-for-a-matrix-near-the-identity)
+[^4]: [Lemma for jocobi's formula proof](https://math.stackexchange.com/questions/2393932/lemma-for-jacobis-formula-proof)
