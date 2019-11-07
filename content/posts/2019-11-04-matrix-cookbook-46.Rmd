@@ -83,6 +83,17 @@ $det^{\prime}(I)=\mathrm {Tr}$ is equivalent to the following:
 \end{equation}
 </p>
 
+**Lemma 3** [^1]
+
+For an invertible matrix $A$, we have:
+<p class=boxed>
+\begin{equation}
+ \operatorname{det}^{\prime}(A)(T)=\operatorname{det} A \operatorname{tr}\left(A^{-1} T\right) 
+\end{equation}
+</p>
+
+Unfortunately, I can not understand the proof of this lemma.
+
 [^1]: [Jacobi's formula](https://en.wikipedia.org/wiki/Jacobi%27s_formula)
 [^2]: [Best affine approximation](https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po)
 [^3]: [Determinant for a matrix near the identity](https://math.stackexchange.com/questions/1174639/series-expansion-of-the-determinant-for-a-matrix-near-the-identity)
