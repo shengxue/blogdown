@@ -92,9 +92,17 @@ For an invertible matrix $A$, we have:
 \end{equation}
 </p>
 
-Unfortunately, I can not understand the proof of this lemma.
+proof: [^5]
+
+Remember that, if $f:E→F$ is a differentiable map, a way to compute $df(a)(v)$ is to find a curve $γ:R→E$ with $γ(0)=a$ and $γ′(0)=v$, and then $df(a)(v)=\frac{d}{dt}|_0f(γ(t))$ (this is the chain rule). Here, find a curve $γ:R→M_n(R)$ with $γ(0)=A$ and $γ′(0)=T$. Then note that
+
+\begin{equation}
+ \begin{aligned} d \operatorname{det}(A)(T)=\left.\frac{d}{d t}\right|_{0}(\operatorname{det}(\gamma(t))) &=\left.\frac{d}{d t}\right|_{0}\left(\operatorname{det}\left(A A^{-1} \gamma(t)\right)\right) \\ =\left.\operatorname{det}(A) \frac{d}{d t}\right|_{0}\left(\operatorname{det}\left(A^{-1} \gamma(t)\right)\right)  &=\operatorname{det}(A) d \operatorname{det}(\operatorname{I})\left(A^{-1} T\right) \end{aligned} 
+\end{equation}
+(since $t↦A^{−1}γ(t)$ is a curve which is $I$ in 0 and which the derivative is $A^{−1}T$ in 0).
 
 [^1]: [Jacobi's formula](https://en.wikipedia.org/wiki/Jacobi%27s_formula)
 [^2]: [Best affine approximation](https://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po)
 [^3]: [Determinant for a matrix near the identity](https://math.stackexchange.com/questions/1174639/series-expansion-of-the-determinant-for-a-matrix-near-the-identity)
 [^4]: [Lemma for jocobi's formula proof](https://math.stackexchange.com/questions/2393932/lemma-for-jacobis-formula-proof)
+[^5]: [How to understand the proof of lemma2 of Jacobi's formula at wikipedia](https://math.stackexchange.com/questions/3427241/how-to-understand-the-proof-of-lemma2-of-jacobis-formula-at-wikipedia/3427259#3427259)
